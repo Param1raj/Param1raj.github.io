@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/static/css/main.fb03b2b2.css",
+    "main.js": "/static/js/main.8bd14e6e.js",
+    "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
+    "static/media/param.png": "/static/media/param.059b2f451cc0d784171e.png",
+    "static/media/React App - Google Chrome 17-10-2022 18_54_00.png": "/static/media/React App - Google Chrome 17-10-2022 18_54_00.5919b96d9b2de6bf3318.png",
+    "static/media/TimeCamp.png": "/static/media/TimeCamp.f6c63404c0b4357777b3.png",
+    "index.html": "/index.html",
+    "main.fb03b2b2.css.map": "/static/css/main.fb03b2b2.css.map",
+    "main.8bd14e6e.js.map": "/static/js/main.8bd14e6e.js.map",
+    "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fb03b2b2.css",
+    "static/js/main.8bd14e6e.js"
+  ]
+}
