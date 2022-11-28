@@ -1,0 +1,72 @@
+#change {
+  background-image: linear-gradient(to right, #1aa1af, #2890aa, #3b7e9f, #496d8f, #505c7c);
+  /* border: 1px solid black; */
+  transition: 0.5s ease;
+  z-index: 2;
+  color: black;
+}
+
+#navbar {
+  background-color: transparent;
+  transition: 0.5s ease;
+}
+
+.box {
+  position: sticky;
+  top: 0px;
+  background-color: transparent;
+  transition: background-color 0.6s;
+}
+
+.boxes {
+  position: sticky;
+  top: 0px;
+  background-color: #2890aa;
+  transition: background-color 0.5s;
+}
+
+/*  */
+
+@media screen and (max-width:440px) {
+  .title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width:760px) and (min-width:440px) {
+  .title {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-width:990px) and (min-width:760px) {
+  .title {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width:1380px) and (min-width:990px) {
+  .title {
+    font-size: 35px;
+  }
+
+  .me-auto {
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    font-size: 24px;
+  }
+
+  #basic-navbar-nav {
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.homeLink{
+cursor: pointer;
+}
+.homeLink:hover{
+  color: white;
+}

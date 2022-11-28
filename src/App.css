@@ -1,5 +1,16 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 .App {
+  padding: 0;
   text-align: center;
+  background-image: url('https://gauravportfolio0083.netlify.app/images/bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size:cover;
+  background-position: top;
 }
 
 .App-logo {
@@ -36,3 +47,4 @@
     transform: rotate(360deg);
   }
 }
+
