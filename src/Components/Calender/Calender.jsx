@@ -72,8 +72,6 @@ font-weight:bold;
 margin:auto;
 color:#2890aa;
 border-top:1px solid white;
-border-left:1px solid white;
-border-right:1px solid white;
 display:flex;
 flex-direction:column;
 justify-content:center;

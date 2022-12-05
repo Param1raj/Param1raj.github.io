@@ -30,12 +30,13 @@ export default function Navbar1(props){
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-          <Link style={styles} className="homeLink" to="home" smooth={true} spy={true}>Home</Link>
-          <Link style={styles} className="homeLink" to="about" smooth={true} spy={true}>About</Link>
-          <Link style={styles} className="homeLink" to="skills" smooth={true} spy={true}>Skill</Link>
-          <Link style={styles} className="homeLink" to="services" smooth={true} spy={true}>services</Link>
-          <Link style={styles} className="homeLink" to="project" smooth={true} spy={true}>Project</Link>
-          <Link style={styles} className="homeLink" to="contact" smooth={true} spy={true}>Contact</Link>          
+          <div className="links">
+          <Link style={styles} className="homeLink" to="home" smooth={true} spy={true}>Home</Link></div>
+          <div className="links"><Link style={styles} className="homeLink" to="about" smooth={true} spy={true}>About</Link></div>
+          <div className="links"><Link style={styles} className="homeLink" to="skills" smooth={true} spy={true}>Skill</Link></div>
+          <div className="links"><Link style={styles} className="homeLink" to="services" smooth={true} spy={true}>Services</Link></div>
+          <div className="links"><Link style={styles} className="homeLink" to="project" smooth={true} spy={true}>Project</Link></div>
+          <div className="links"><Link style={styles} className="homeLink" to="contact" smooth={true} spy={true}>Contact</Link>          </div>
           </Nav>
         </Navbar.Collapse>
       </Container>
