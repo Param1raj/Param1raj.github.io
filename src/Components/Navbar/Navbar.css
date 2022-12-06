@@ -53,8 +53,8 @@
   .me-auto {
     display: flex;
     justify-content: space-between;
-    width: 600px;
-    font-size: 24px;
+    width: 650px;
+    font-size: 22px;
   }
 
   #basic-navbar-nav {
@@ -70,3 +70,4 @@ cursor: pointer;
 .homeLink:hover{
   color: white;
 }
+

@@ -19,7 +19,7 @@ export default function About() {
                     </span>
                     <p style={{    textAlign: "justify",
                         fontSize: "1.5vw"}}>
-                        Aspiraning Full Stack Web Developer, experienced
+                        Aspiring Full Stack Web Developer, experienced
                         in real-life projects with strong knowledge of
                         React JS. Highly adaptive and eager to learn new
                         technologies. Looking forward to the opportunity

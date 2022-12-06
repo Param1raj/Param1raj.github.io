@@ -4,6 +4,9 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import {Link} from 'react-scroll';
+import {Text} from '@chakra-ui/react';
+
+import Resume from './ParamRaj_Resume.pdf';
 
 export default function Navbar1(props){
   const styles = {
@@ -21,6 +24,9 @@ export default function Navbar1(props){
     }
     window.addEventListener('scroll',ChangeNavColor);
 
+    function handleClick(){
+      return window.open("https://drive.google.com/u/0/uc?id=1N-tpdNqLwWpmLh2G_YlrWN4DzLNTvq2K&export=download")
+    }
 
     
     return <>
@@ -30,13 +36,13 @@ export default function Navbar1(props){
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-          <div className="links">
-          <Link style={styles} className="homeLink" to="home" smooth={true} spy={true}>Home</Link></div>
-          <div className="links"><Link style={styles} className="homeLink" to="about" smooth={true} spy={true}>About</Link></div>
-          <div className="links"><Link style={styles} className="homeLink" to="skills" smooth={true} spy={true}>Skill</Link></div>
+          <div className="links"><Link style={styles} className="homeLink" to="home" smooth={true} spy={true}>Home</Link></div>
+          <div className="links"><Link style={styles} className="homeLink" to="about" smooth={true} spy={true}>About Me</Link></div>
+          <div className="links"><Link style={styles} className="homeLink" to="skills" smooth={true} spy={true}>Skills</Link></div>
           <div className="links"><Link style={styles} className="homeLink" to="services" smooth={true} spy={true}>Services</Link></div>
           <div className="links"><Link style={styles} className="homeLink" to="project" smooth={true} spy={true}>Project</Link></div>
-          <div className="links"><Link style={styles} className="homeLink" to="contact" smooth={true} spy={true}>Contact</Link>          </div>
+          <div className="links"><Link style={styles} className="homeLink" to="contact" smooth={true} spy={true}>Contact</Link></div>
+          <div className="links"><Text as={Link} _hover={{textDecoration:'none'}}  href='https://drive.google.com/u/0/uc?id=1N-tpdNqLwWpmLh2G_YlrWN4DzLNTvq2K&export=download' style={styles} className="homeLink" onClick={handleClick}>Resume</Text></div>
           </Nav>
         </Navbar.Collapse>
       </Container>
