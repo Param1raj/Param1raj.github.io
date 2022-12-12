@@ -60,7 +60,7 @@ export const Profile = styled.div`
 `
 export const Image = styled.img`
     width:30%;
-    height:31vw;
+    height:30vw;
     border-radius:50%;
 `
 export const Details = styled.div`
