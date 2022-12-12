@@ -33,5 +33,6 @@ export const Box = styled.div`
 
 
 export const Image = styled.img`
-
+width:60px;
+height:60px;
 `

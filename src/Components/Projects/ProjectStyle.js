@@ -26,7 +26,8 @@ export const Boxes= styled.div`
     flex-wrap:wrap;
     justify-content:center;
     align-items:center;
-    padding-bottom:50px
+    padding-bottom:50px;
+    gap:10px;
 ` 
 export const Buttons = styled.button`
 width: 30px;
@@ -69,7 +70,7 @@ background:black;
 border: 1px solid white;
 height: 100%;
 width: 405px;
-margin-right:13px;
+margin-right:0px;
 border-radius:20px;
 padding-bottom:30px;
 &:hover{
