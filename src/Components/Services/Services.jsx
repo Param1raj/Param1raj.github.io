@@ -10,7 +10,6 @@ export default function Services() {
                 Skills
             </Heading>
             <Boxes >
-
                 <Box background='#212121;'>
                     <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"></Image>
                     <Head style={{ color: "white" }}>React</Head>

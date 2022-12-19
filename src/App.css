@@ -1,3 +1,4 @@
+
 *{
   margin: 0;
   padding: 0;
@@ -10,6 +11,8 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size:cover;
+  font-family:sans-serif, "montserrat";
+  src: url('./montserrat.regular.ttf');;
   background-position: top;
 }
 .App ::-webkit-scrollbar{

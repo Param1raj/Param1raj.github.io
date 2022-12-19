@@ -7,6 +7,7 @@ import Projects from "../Components/Projects/Project";
 import Services from "../Components/Services/Services";
 import { useRef } from "react";
 import Calender from "../Components/Calender/Calender";
+import { Callhere } from "../Components/Callhere/Callhere";
 export default function Home (){
     const Homeref = useRef(null);
     const Skillref = useRef(null);
@@ -28,5 +29,6 @@ export default function Home (){
         console.log(Homeref,Skillref,Serviceref,Projectref,Contactref)
 
     }
+    {/* <Callhere/> */}
         </>
 }

@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
 export const Box = styled.div`
-height:200px;
-width:200px;
+height:100px;
+width:100px;
 padding:10px;
+margin:auto;
 display:flex;
 flex-direction:column;
 // border:1px solid white;
@@ -16,24 +17,34 @@ border-radius:30px;
 @media screen and (max-width:300px){
     width:100px;
     height:100px;
-    padding:5px;
+    // padding:5px;
+    margin:auto;
 }
 @media screen and (max-width:400px)and (min-width:300px){
     width:100px;
     height:100px;
-    padding:5px;
+    // padding:5px;
+    margin:auto;
 }
 @media screen and (max-width:740px)and (min-width:400px){
-    width:140px;
-    height:140px;
+    width:100px;
+    height:100px;
+    margin:auto;
 }
 @media screen and (max-width:740px){
-    width:140px;
-    height:140px;
+    width:100px;
+    height:100px;
+    margin:auto;
 }
 @media screen and (max-width:1090px) and (min-width:740px){
-    width:170px;
-    height:170px;
+    width:100px;
+    height:100px;
+    margin:auto;
+}
+@media screen and(min-width:1090px){
+    width:100px;
+    height:100px;
+    margin:auto;
 }
 `
 
@@ -47,7 +58,6 @@ export const Boxes =styled.div`
     grid-template-columns: 248px 250px 262px 260px;
     grid-row-gap: 37px;
     justify-content: end;
-    // border:1px solid black;
     height: auto;
     padding-bottom: 42px;
     @media screen and (max-width:300px) and (min-width:200px){
@@ -56,30 +66,31 @@ export const Boxes =styled.div`
         justify-content:end;
         gap:1vw;
     }
-    @media screen and (max-width:400px)and (min-width:300px){
-        grid-template-columns: 164px 165px ;
-        grid-row-gap: 50px;
-        justify-content:end;
+    @media screen and (max-width:500px)and (min-width:300px){
+        grid-template-columns: 30% 30% 30% ;
+        // grid-row-gap: 50px;
+        // justify-content:end;
+        gap:5vw;
+    }
+    @media screen and (max-width:740px)and (min-width:500px){
+        grid-template-columns: 30% 30%  30%;
         gap:1vw;
+        // grid-row-gap: 50px;
     }
-    @media screen and (max-width:740px)and (min-width:400px){
-        grid-template-columns: 180px 170px ;
-        grid-row-gap: 50px;
+    @media screen and (max-width:1000px) and (min-width:740px){
+        grid-template-columns: 24% 24% 24% 24% ;
+        // grid-row-gap: 50px;
+        gap:2vw;
     }
-    @media screen and (max-width:1090px) and (min-width:740px){
-        grid-template-columns: 230px 230px 230px ;
-        grid-row-gap: 50px;
-        gap:6vw;
-    }
-    @media screen and (min-width:1090px){
-        grid-template-columns: 250px 250px 250px 250px;
-        grid-row-gap:50px;
-        gap:6vw;
+    @media screen and (min-width:1000px){
+        grid-template-columns: 18% 18% 18% 18% 18%;
+        // grid-row-gap:50px;
+        gap:2.5vw;
     }
 `
 
 export const Head = styled.h1`
-font-size:7vw;
+font-size:2vw;
 
 @media screen and (max-width:400px) and (min-width:300px){
     font-size:5vw;

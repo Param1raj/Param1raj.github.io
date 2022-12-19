@@ -6,7 +6,6 @@ max-width: 100%;
 height:auto;
 margin-top:100px;
 padding-bottom:20px;
-// border:1px solid red;
 @media screen and (max-width:440px){
     margin-top:30px;
 }
@@ -23,9 +22,6 @@ export const Heading=styled.div`
 color: BLACK;
 font-size: 39px;
 padding-top: 68px;
-&:after{
-    content:" ";
-}
 @media screen and (max-width:440px){
     padding-top:20px;
     font-size:22px;
@@ -36,7 +32,7 @@ padding-top: 68px;
 }
 @media screen and (max-width:980px) and (min-width:760px){
     padding-top:45px;
-    font-size:34px;
+    font-size:33px;
 }
 `
 
@@ -46,16 +42,15 @@ export const Profile = styled.div`
     justify-content:space-around;
     align-items:center;
     height:auto;
-    margin-top:50px
-    
+    margin-top:50px 
 @media screen and (max-width:440px){
     margin-top:20px;
 }
 @media screen and (max-width:760px) and (min-width:440px){
-    margin-top:35px;
+    margin-top:0px;
 }
 @media screen and (max-width:980px) and (min-width:760px){
-    margin-top:45px;
+    margin-top:0px;
 }
 `
 export const Image = styled.img`
@@ -64,7 +59,7 @@ export const Image = styled.img`
     border-radius:50%;
 `
 export const Details = styled.div`
-    width:50%;
+    width:60%;
     height:auto;
     display:flex;
     flex-direction:column;

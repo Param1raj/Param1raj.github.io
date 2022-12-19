@@ -16,17 +16,12 @@ text-align: center;
 @media screen and (max-width:440px){
     margin-top: 0px;
     padding-top:10px;
-    font-size:22px;
-}
-@media screen and (max-width:760px) and (min-width:440px){
-    margin-top: 15px;
-    padding-top:20px;
-    font-size:28px;
+    font-size:25px;
 }
 @media screen and (max-width:980px) and (min-width:760px){
     margin-top: 25px;
     padding-top:30px;
-    font-size:34px;
+    font-size:28px;
 }
 `
 
@@ -84,6 +79,6 @@ export const Image = styled.img`
 `
 
 export const Text = styled.div`
- fontSize: 50px;
+ font-size: 100%;
  color: white 
 `

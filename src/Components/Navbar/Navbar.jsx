@@ -32,7 +32,7 @@ export default function Navbar1(props){
     return <>
  <Navbar bg={"black"} expand="lg" className={colorChange?'boxes':'box'}>
       <Container >
-        <Navbar.Brand style={{color:'white'}} className="title" href="#home">Param Raj</Navbar.Brand>
+        <Navbar.Brand style={{color:'white'}} className="title" href="/home">Param Raj</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
