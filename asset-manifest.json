@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7d476b63.css",
-    "main.js": "/static/js/main.e73ad42f.js",
+    "main.css": "/static/css/main.2651ded8.css",
+    "main.js": "/static/js/main.e009528b.js",
     "static/js/787.128fc6e9.chunk.js": "/static/js/787.128fc6e9.chunk.js",
     "static/media/Beautibebo.png": "/static/media/Beautibebo.5aab5f00883205777002.png",
     "static/media/param.png": "/static/media/param.059b2f451cc0d784171e.png",
@@ -12,12 +12,12 @@
     "static/media/Todoapp.png": "/static/media/Todoapp.bc699dd14f65785529bc.png",
     "static/media/montserrat.regular.ttf": "/static/media/montserrat.regular.e20d5327f1a05620c084.ttf",
     "index.html": "/index.html",
-    "main.7d476b63.css.map": "/static/css/main.7d476b63.css.map",
-    "main.e73ad42f.js.map": "/static/js/main.e73ad42f.js.map",
+    "main.2651ded8.css.map": "/static/css/main.2651ded8.css.map",
+    "main.e009528b.js.map": "/static/js/main.e009528b.js.map",
     "787.128fc6e9.chunk.js.map": "/static/js/787.128fc6e9.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d476b63.css",
-    "static/js/main.e73ad42f.js"
+    "static/css/main.2651ded8.css",
+    "static/js/main.e009528b.js"
   ]
 }
