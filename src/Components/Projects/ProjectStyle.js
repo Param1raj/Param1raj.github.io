@@ -11,6 +11,7 @@ width:100%;
 height:auto;
 border:1px solid black;
 background:black;
+text-align:center;
 `
 
 export const Heading = styled.div`
@@ -18,7 +19,7 @@ font-size: 39px;
 margin-top: 59px;
 color:white
 `
-export const Boxes= styled.div`
+export const Boxes = styled.div`
     width:100%;
     height:auto;
     margin-top:46px;
@@ -28,7 +29,7 @@ export const Boxes= styled.div`
     align-items:center;
     padding-bottom:50px;
     gap:10px;
-` 
+`
 export const Buttons = styled.button`
 width: 30px;
 height:30px;

@@ -1,59 +1,121 @@
-import {  Container, Heading } from "../Projects/ProjectStyle"
-import { Boxes,Box, Image, Head } from "./ServicesStyle"
+import React from "react";
+import { Boxes, BoxesItems, Headline, Image, Text } from "./SkillsStyle";
+import { Box, Typography } from "@mui/material";
+import AndroidIcon from "@mui/icons-material/Android";
+import CodeIcon from "@mui/icons-material/Code";
+import ServicesCard from "./ServicesCard";
+
+const ServiceList = [
+  {
+    ServiceIcon: <CodeIcon sx={{ fontSize: "10rem" }} />,
+    ServiceName: "Web Developement",
+    Teckstacks: [
+      "Nextjs",
+      "Express",
+      "MongoDB, Postgres",
+      "Redis",
+      "RabbitMQ",
+      "GRPC",
+      "Docker",
+      "Google Cloud Console",
+    ],
+  },
+  {
+    ServiceIcon: <AndroidIcon sx={{ fontSize: "10rem" }} />,
+    ServiceName: "Android Developement",
+    Teckstacks: [
+      "React Native",
+      "Express",
+      "MongoDB, Postgres",
+      "Redis",
+      "RabbitMQ",
+      "GRPC",
+      "Docker",
+      "Google Cloud Console",
+    ],
+  },
+];
 
 export default function Services() {
-    const arr = [1, 1, 1, 1, 1, 1];
-    console.log(arr)
-    return <>
-        <Container style={{ background: 'transparent',height:"auto" }} id='skills'>
-            <Heading>
-                Skills
-            </Heading>
-            <Boxes >
-                <Box background='#212121;'>
-                    <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"></Image>
-                    <Head style={{ color: "white" }}>React</Head>
-                </Box>
-                <Box background='#212121;'>
-                    <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
-                    <Head style={{ color: "white" }}>HTML</Head>
-                </Box>
-                <Box background='#212121;'>
-
-                    <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />
-                    <Head style={{ color: "white" }}>CSS</Head>
-                </Box>
-                <Box background='#212121;'>
-
-                    <Image style={{borderRadius:'30px'}} src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />
-                    <Head style={{ color: "white" }}>JS</Head>
-                </Box>
-                <Box background='#212121;'>
-
-                    <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" />
-                    <Head style={{ color: "white" }}>MongoDb</Head>
-                </Box>
-                <Box background='#212121;'>
-                    <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-plain.svg" />
-                    <Head style={{ color: "white" }}>NodeJs</Head>
-                </Box>
-                <Box background='#212121;'>
-                    <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" />
-                    <Head style={{ color: "white" }}>Express</Head>
-                </Box>
-                <Box background='#212121;'>
-
-                    <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" />
-
-                    <Head style={{ color: "white" }}>Bootstrap</Head>
-                </Box>
-                <Box background='#212121;'>
-
-                    <Image src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" />
-                    <Head style={{ color: "white" }}>Redux</Head>
-                </Box>
-
-            </Boxes>
-        </Container>
+  // <a href="https://iconscout.com/icons/code" target="_blank">Code Icon</a> by <a href="https://iconscout.com/contributors/maninderkaur" target="_blank">maninderkaur</a>
+  return (
+    <>
+      <Box
+        id="services"
+        sx={{
+          background: "black",
+          height: "auto",
+        }}
+        color={"white"}
+      >
+        <Box
+          sx={{
+            // borderBlock: "1px solid white",
+            textAlign: { xs: "center" },
+            padding: { xs: "70px", md: "30px" },
+          }}
+        >
+          <Typography color={"#A39E9E"}>Serives</Typography>
+          <Box>
+            <Typography fontSize={{ xs: "2rem", sm: "2.7rem" }}>
+              My <span style={{ color: "#AA7000" }}>Special Service</span> For
+              your
+            </Typography>
+            <Typography fontSize={{ xs: "2rem", sm: "2.7rem" }}>
+              Business Development
+            </Typography>
+          </Box>
+        </Box>
+        {/* <Boxes>
+          <BoxesItems>
+            <div style={{ padding: "20px" }}>
+              <Image src="https://flaticons.net/custom.php?i=YNxxtzyT05DMwibIVIeIxbhpeqkyI7&format=png&size=256" />
+            </div>
+            <Text>WebDesign</Text>
+          </BoxesItems>
+          <BoxesItems>
+            <div style={{ padding: "20px" }}>
+              <Image src="https://flaticons.net/custom.php?i=yzkZtjGI8bQX3UJIVIaIamcelop2uX&format=png&size=256" />
+            </div>
+            <Text>Front End</Text>
+          </BoxesItems>
+          <BoxesItems>
+            <div style={{ padding: "20px" }}>
+              <Image src="https://flaticons.net/custom.php?i=r5QFYZtNaD4QiBIxIkIxDhjPZYlu5&format=png&size=256" />
+            </div>
+            <Text>Back End</Text>
+          </BoxesItems>
+        </Boxes> */}
+        <Box
+          // border={"1px solid blue"}
+          width={"100%"}
+          padding={"2rem"}
+          height={"100%"}
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+        >
+          <Box
+            minWidth={{ xs: "60%", md: "40%" }}
+            height={"90%"}
+            display={"grid"}
+            gridTemplateColumns={{ sm: "repeat(1,1fr)", md: "repeat(2,1fr)" }}
+            columnGap={{ md: "2rem" }}
+            rowGap={{ xs: "2rem", md: "" }}
+            // border={"1px solid green"}
+          >
+            {ServiceList.map(({ ServiceIcon, ServiceName, Teckstacks }) => {
+              return (
+                <ServicesCard
+                  icon={ServiceIcon}
+                  name={ServiceName}
+                  tech={Teckstacks}
+                />
+              );
+            })}
+          </Box>
+        </Box>
+      </Box>
     </>
+  );
 }

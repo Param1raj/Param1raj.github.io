@@ -6,14 +6,13 @@
 
 .App {
   padding: 0;
-  text-align: center;
-  background-image: url('https://gauravportfolio0083.netlify.app/images/bg.jpg');
-  background-repeat: no-repeat;
+  /* background-image: url('../public//assets//joshua-reddekopp-SyYmXSDnJ54-unsplash.jpg'); */
+  /* background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size:cover;
+  background-size:cover; */
   font-family:sans-serif, "montserrat";
-  src: url('./montserrat.regular.ttf');;
-  background-position: top;
+  src: url('./montserrat.regular.ttf');
+  /* background-position-y: -10rem */
 }
 .App ::-webkit-scrollbar{
   display: none;

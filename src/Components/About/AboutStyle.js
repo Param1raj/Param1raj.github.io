@@ -4,7 +4,7 @@ export const Action = styled.div`
 background-image: linear-gradient(to right, #1aa1af, #2890aa, #3b7e9f, #496d8f, #505c7c);
 max-width: 100%;
 height:auto;
-margin-top:100px;
+// margin-top:100px;
 padding-bottom:20px;
 @media screen and (max-width:440px){
     margin-top:30px;
@@ -18,7 +18,7 @@ padding-bottom:20px;
 `
 
 
-export const Heading=styled.div`
+export const Heading = styled.div`
 color: BLACK;
 font-size: 39px;
 padding-top: 68px;
@@ -59,10 +59,11 @@ export const Image = styled.img`
     border-radius:50%;
 `
 export const Details = styled.div`
-    width:60%;
+    width:75%;
     height:auto;
     display:flex;
     flex-direction:column;
     justify-content:center;
+    // border:1px solid red;
 `
 

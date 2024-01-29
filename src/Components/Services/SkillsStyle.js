@@ -25,16 +25,18 @@ text-align: center;
 }
 `
 
-export const Boxes= styled.div`
+export const Boxes = styled.div`
     width:100%;
     height:auto;
-    margin-top:46px;
+    // margin-top:46px;
     display :flex;
-    padding-left:52px
+    // padding-left:52px;
     align-items:center;
     justify-content: center;
     flex-wrap:wrap;
-` 
+    // border:1px solid red;
+    padding:3rem;
+`
 export const BoxesItems = styled.div`
 background:black;
 border: 1px solid white;

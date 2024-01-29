@@ -12,10 +12,13 @@
 }
 
 .box {
+  /* width: 100%; */
   position: sticky;
   top: 0px;
   background-color: transparent;
   transition: background-color 0.6s;
+  border: 1px solid red;
+  height: 100px;
 }
 
 .boxes {
@@ -23,6 +26,9 @@
   top: 0px;
   background-color: #2890aa;
   transition: background-color 0.5s;
+  border: 1px solid red;
+  height: 100px;
+  /* width: 100%; */
 }
 
 /*  */
@@ -74,9 +80,10 @@
 }
 
 
-@media screen and (max-width:1380px) and (min-width:990px) {
+@media screen and (max-width:1780px) and (min-width:990px) {
   .title {
     font-size: 30px;
+    border: 1px solid red;
   }
 
   .me-auto {
