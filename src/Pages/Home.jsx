@@ -27,7 +27,7 @@ export default function Home() {
       <Projects ref={Projectref} />
       {/* <Calender /> */}
       <ContactMe ref={Contactref} />
-      {console.log(Homeref, Skillref, Serviceref, Projectref, Contactref)}
+      {/* {console.log(Homeref, Skillref, Serviceref, Projectref, Contactref)} */}
     </>
   );
 }

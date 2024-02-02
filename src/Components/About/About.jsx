@@ -92,7 +92,7 @@ export default function About() {
             </Box>
           </Box>
           <Box
-            width={{ xs: "100%", sm: "90%" }}
+            width={{ xs: "100%", sm: "80%" }}
             border={"1px solid hsla(0,0%,100%,.1)"}
             display={"grid"}
             gridTemplateColumns={{

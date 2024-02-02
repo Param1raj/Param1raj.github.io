@@ -1,62 +1,57 @@
-// import {
-//   Boxes,
-//   BoxesItems,
-//   Button,
-//   Buttons,
-//   Container,
-//   Heading,
-//   H3,
-//   Description,
-//   UL,
-// } from "./ProjectStyle";
-// import project1 from "./React App - Google Chrome 17-10-2022 18_54_00.png";
-import project2 from "./TimeCamp.png";
-
+import timeCampBanner from "./TimeCamp (1).png";
+import PortfolioBanner from "./Portfoliobanner.png";
+import RentomojoBanner from "./RentoMojo (1).png";
+import BeatibeboBanner from "./Beautibebo.png";
+import GetaBanner from "./yoga_project_landing_page_using_nextjs.png";
 import { Box, Typography } from "@mui/material";
-import ProjectCard from "./ProjectCard";
+// import ProjectCard from "./ProjectCard";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
-// import { Button } from "bootstrap";
 
 const ProjectList = [
   {
-    ProjectName: "Gita(Yoga Plateform)",
+    ProjectName: "Gita (Yoga Plateform)",
     ProjectDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus id quibusdam at iure aspernatur porro laborum accusantium et libero, earum consequuntur alias, iste ipsa ad excepturi, officia doloribus facere.",
-    ProjectBanner: project2,
+    ProjectBanner: GetaBanner,
     Direction: "row",
+    link: "https://paramnetlify.netlify.app/",
   },
   {
-    ProjectName: "Gita(Yoga Plateform)",
+    ProjectName: "Portfolio",
     ProjectDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus id quibusdam at iure aspernatur porro laborum accusantium et libero, earum consequuntur alias, iste ipsa ad excepturi, officia doloribus facere.",
-    ProjectBanner: project2,
+    ProjectBanner: PortfolioBanner,
     Direction: "row-reverce",
+    link: "https://param1raj.github.io/",
   },
   {
-    ProjectName: "Gita(Yoga Plateform)",
+    ProjectName: "TimeCamp Clone",
     ProjectDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus id quibusdam at iure aspernatur porro laborum accusantium et libero, earum consequuntur alias, iste ipsa ad excepturi, officia doloribus facere.",
-    ProjectBanner: project2,
+    ProjectBanner: timeCampBanner,
     Direction: "row",
+    link: "astonishing-sorbet-368da1.netlify.app",
   },
   {
-    ProjectName: "Gita(Yoga Plateform)",
+    ProjectName: "BeautiBebo Clone",
     ProjectDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus id quibusdam at iure aspernatur porro laborum accusantium et libero, earum consequuntur alias, iste ipsa ad excepturi, officia doloribus facere.",
-    ProjectBanner: project2,
+    ProjectBanner: BeatibeboBanner,
     Direction: "row-reverce",
+    link: "https://beautibebo-netlify.netlify.app/",
   },
   {
-    ProjectName: "Gita(Yoga Plateform)",
+    ProjectName: "RentoMojo Clone",
     ProjectDescription:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus id quibusdam at iure aspernatur porro laborum accusantium et libero, earum consequuntur alias, iste ipsa ad excepturi, officia doloribus facere.",
-    ProjectBanner: project2,
+    ProjectBanner: RentomojoBanner,
     Direction: "row",
+    link: "https://rentomojosite.netlify.app",
   },
 ];
 export default function Projects() {
   return (
-    <Box sx={{ background: "black" }}>
+    <Box sx={{ background: "black", border: "0px solid red" }} id="project">
       <Box textAlign={"center"} padding={"2rem"}>
         <Typography color={"#A39E9E"}>Latest Works</Typography>
         <Typography fontSize={"2.5rem"} color={"white"}>
@@ -69,23 +64,27 @@ export default function Projects() {
         justifyContent={"center"}
         alignItems={"center"}
         marginTop={"20px"}
-        padding={{ xs: "3rem", sm: "5rem", md: "5.2rem", lg: "2rem" }}
-        // border={"1px solid blue"}
+        padding={{ xs: "2rem", sm: "5rem", md: "5.2rem", lg: "2rem" }}
+        // border={"1px solid red"}
       >
         <Box
           width={{ lg: "88%", xl: "80%" }}
-          // width={"70%"}
           display={"flex"}
           flexDirection={"column"}
           rowGap={"3em"}
-          // border={"1px solid blue"}
+          // border={"1px solid red"}
         >
           {ProjectList.map(
-            ({ ProjectName, ProjectDescription, ProjectBanner, Direction }) => {
+            ({
+              ProjectName,
+              ProjectDescription,
+              ProjectBanner,
+              Direction,
+              link,
+            }) => {
               return (
                 <Box
                   display={"flex"}
-                  // height={"10rem"}
                   flexDirection={{
                     xs: "column",
                     sm: "column",
@@ -93,19 +92,18 @@ export default function Projects() {
                     lg: Direction === "row" ? "row" : "row-reverse",
                   }}
                   width={"100%"}
-                  // border={"1px solid red"}
                 >
                   <Box
                     as={"img"}
                     src={ProjectBanner}
                     width={{ xs: "100%", sm: "100%", md: "100%", lg: "50%" }}
                     height={{
-                      xs: "20rem",
+                      xs: "15rem",
                       sm: "22rem",
                       md: "30rem",
                       lg: "25rem",
                     }}
-                    sx={{ aspectRatio: 1 }}
+                    sx={{ aspectRatio: 1 / 1 }}
                   ></Box>
                   <Box
                     width={{ xs: "100%", sm: "100%", md: "100%", lg: "50%" }}
@@ -116,7 +114,6 @@ export default function Projects() {
                     <Box
                       width={{ xs: "90%", sm: "90%", md: "80%" }}
                       height={"80%"}
-                      // border={"1px solid white"}
                       display={"flex"}
                       flexDirection={"column"}
                       rowGap={"25px"}
@@ -134,44 +131,51 @@ export default function Projects() {
                       >
                         Web Development
                       </Typography>
-                      <Typography
-                        fontSize={"2.5rem"}
-                        color={"white"}
-                        sx={{
-                          transition: "color 1s ease",
-                          ":hover": { color: "#AA7000", cursor: "pointer" },
-                        }}
+                      <a
+                        href={link}
+                        target="_blank"
+                        style={{ textDecoration: "none" }}
                       >
-                        {ProjectName}
-                      </Typography>
+                        <Typography
+                          fontSize={{ xs: "2rem", sm: "2.5rem" }}
+                          color={"white"}
+                          sx={{
+                            transition: "color 1s ease",
+                            ":hover": { color: "#AA7000", cursor: "pointer" },
+                          }}
+                        >
+                          {ProjectName}
+                        </Typography>
+                      </a>
                       <Typography color={"gray"}>
                         {ProjectDescription}
                       </Typography>
-                      <Box
-                        sx={{
-                          width: "40px",
-                          height: "40px",
-                          borderRadius: "50%",
-                          // color: "white",
-                          border: "1px solid gray",
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          ":hover": {
-                            background: "#AA7000",
-                            border: "1px solid #AA7000",
-                            cursor: "pointer",
-                            "& .icon": {
-                              color: "white",
+                      <a href={link} target="_blank">
+                        <Box
+                          sx={{
+                            width: "40px",
+                            height: "40px",
+                            borderRadius: "50%",
+                            border: "1px solid gray",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            ":hover": {
+                              background: "#AA7000",
+                              border: "1px solid #AA7000",
+                              cursor: "pointer",
+                              "& .icon": {
+                                color: "white",
+                              },
                             },
-                          },
-                        }}
-                      >
-                        <ArrowOutwardIcon
-                          className="icon"
-                          sx={{ color: "gray" }}
-                        />
-                      </Box>
+                          }}
+                        >
+                          <ArrowOutwardIcon
+                            className="icon"
+                            sx={{ color: "gray" }}
+                          />
+                        </Box>
+                      </a>
                     </Box>
                   </Box>
                 </Box>

@@ -118,13 +118,13 @@ export default function Skills() {
             lg: "40% 60%",
             xl: "40% 60%",
           }}
-          gridTemplateRows={{ xs: "25% 1fr", sm: "30% 1fr", md: "30% 1fr" }}
+          gridTemplateRows={{ xs: "30% 70%", sm: "30% 1fr", md: "30% 1fr" }}
           width={{ md: "100%", lg: "100%", xl: "90%" }}
           // height={"fit-content"}
           // sx={{ border: "1px solid blue" }}
         >
           <Box
-            // border={"1px solid red"} 
+            // border={"1px solid red"}
             height={"fit-content"}
             padding={{ xs: "30px", md: "50px" }}
             display={"flex"}
@@ -162,9 +162,10 @@ export default function Skills() {
             <Box>
               <Typography
                 color={"white"}
-                width={"90%"}
+                width={{ xs: "100%", sm: "90%" }}
                 fontSize={{
-                  xs: "1rem",
+                  xs: "0.9rem",
+                  sm: "1rem",
                 }}
               >
                 Delve into my skill set, where React and Next.js expertise

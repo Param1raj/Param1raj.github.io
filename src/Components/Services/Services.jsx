@@ -51,19 +51,17 @@ export default function Services() {
         <Box
           sx={{
             // borderBlock: "1px solid white",
-            textAlign: { xs: "center" },
-            padding: { xs: "70px", md: "30px" },
+            textAlign: { xs: "left", sm: "center" },
+            padding: { xs: "40px", md: "30px" },
           }}
         >
           <Typography color={"#A39E9E"}>Serives</Typography>
           <Box>
             <Typography fontSize={{ xs: "2rem", sm: "2.7rem" }}>
               My <span style={{ color: "#AA7000" }}>Special Service</span> For
-              your
+              your Business Development
             </Typography>
-            <Typography fontSize={{ xs: "2rem", sm: "2.7rem" }}>
-              Business Development
-            </Typography>
+            <Typography fontSize={{ xs: "2rem", sm: "2.7rem" }}></Typography>
           </Box>
         </Box>
         {/* <Boxes>
