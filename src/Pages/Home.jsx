@@ -8,6 +8,7 @@ import Skills from "../Components/Skills/Skills";
 import { useRef } from "react";
 import Calender from "../Components/Calender/Calender";
 import DrawerAppBar from "../Components/Navbar/MuiNav";
+import Footer from "../Components/Footer/Footer";
 // import { Callhere } from "../Components/Callhere/Callhere";
 export default function Home() {
   const Homeref = useRef(null);
@@ -20,14 +21,12 @@ export default function Home() {
     <>
       <DrawerAppBar />
       <Header ref={Homeref} />
-      {/* TODO: add Some more things in about section! */}
       <About ref={Aboutref} />
       <Services ref={Serviceref} />
       <Skills ref={Skillref} />
       <Projects ref={Projectref} />
-      {/* <Calender /> */}
       <ContactMe ref={Contactref} />
-      {/* {console.log(Homeref, Skillref, Serviceref, Projectref, Contactref)} */}
+      <Footer />
     </>
   );
 }
