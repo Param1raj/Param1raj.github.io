@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.67290a2c.css",
-    "main.js": "/static/js/main.8f44ca2a.js",
+    "main.js": "/static/js/main.ebbd77a1.js",
     "static/js/787.2dcca737.chunk.js": "/static/js/787.2dcca737.chunk.js",
     "static/media/Portfoliobanner.png": "/static/media/Portfoliobanner.382ff7e9312e7055dfc7.png",
     "static/media/joshua-reddekopp-SyYmXSDnJ54-unsplash.jpg": "/static/media/joshua-reddekopp-SyYmXSDnJ54-unsplash.923b3b75dca10fea2e5e.jpg",
@@ -11,13 +11,14 @@
     "static/media/RentoMojo (1).png": "/static/media/RentoMojo (1).5a4e6717b806a2b39593.png",
     "static/media/TimeCamp (1).png": "/static/media/TimeCamp (1).45586d4bc1400c9bf1d1.png",
     "static/media/montserrat.regular.ttf": "/static/media/montserrat.regular.e20d5327f1a05620c084.ttf",
+    "static/media/favicon.ico.png": "/static/media/favicon.ico.a3f2c544d10f13b1e50e.png",
     "index.html": "/index.html",
     "main.67290a2c.css.map": "/static/css/main.67290a2c.css.map",
-    "main.8f44ca2a.js.map": "/static/js/main.8f44ca2a.js.map",
+    "main.ebbd77a1.js.map": "/static/js/main.ebbd77a1.js.map",
     "787.2dcca737.chunk.js.map": "/static/js/787.2dcca737.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.67290a2c.css",
-    "static/js/main.8f44ca2a.js"
+    "static/js/main.ebbd77a1.js"
   ]
 }
