@@ -1,15 +1,9 @@
 import React from "react";
-import {
-  FormControl,
-  IconButton,
-  InputAdornment,
-  OutlinedInput,
-  TextField,
-} from "@mui/material";
+import { FormControl, InputAdornment, OutlinedInput } from "@mui/material";
 import { VisibilityOff } from "@mui/icons-material";
 
 /**
- * @param count Number of unique email to be generarted. Default is 5.
+ * @param
  */
 export default function Input({
   placeholder = "Name",

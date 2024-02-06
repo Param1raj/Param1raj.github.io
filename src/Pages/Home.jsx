@@ -1,4 +1,3 @@
-import Navbar from "../Components/Navbar/Navbar";
 import Header from "../Components/HeaderStyle/Header";
 import About from "../Components/About/About";
 import Services from "../Components/Services/Services";
@@ -6,7 +5,6 @@ import ContactMe from "../Components/ContactMe/Contact";
 import Projects from "../Components/Projects/Project";
 import Skills from "../Components/Skills/Skills";
 import { useRef } from "react";
-import Calender from "../Components/Calender/Calender";
 import DrawerAppBar from "../Components/Navbar/MuiNav";
 import Footer from "../Components/Footer/Footer";
 // import { Callhere } from "../Components/Callhere/Callhere";

@@ -2,18 +2,12 @@
 
 import {
   Box,
-  Button,
-  CssBaseline,
   Input,
-  // Input,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
-  TextField,
-  // TextareaAutosize,
   Typography,
-  styled,
 } from "@mui/material";
 import { useForm } from "react-hook-form";
 
@@ -33,17 +27,11 @@ const Experties = [
 ];
 const IconStyles = {
   color: "white",
-  // background: "inherit",
   height: "53px",
   width: "20px",
 };
 export default function ContactMe() {
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   return (
     // <>
     //   <Container id="contact">

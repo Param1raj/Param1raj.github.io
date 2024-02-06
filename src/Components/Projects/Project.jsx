@@ -135,6 +135,7 @@ export default function Projects() {
                         href={link}
                         target="_blank"
                         style={{ textDecoration: "none" }}
+                        rel="noreferrer"
                       >
                         <Typography
                           fontSize={{ xs: "2rem", sm: "2.5rem" }}
@@ -150,7 +151,7 @@ export default function Projects() {
                       <Typography color={"gray"}>
                         {ProjectDescription}
                       </Typography>
-                      <a href={link} target="_blank">
+                      <a href={link} target="_blank" rel="noreferrer">
                         <Box
                           sx={{
                             width: "40px",

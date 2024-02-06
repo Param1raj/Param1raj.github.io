@@ -1,12 +1,4 @@
-import {
-  Box,
-  List,
-  ListItem,
-  ListItemButton,
-  ListItemText,
-  ListSubheader,
-  Typography,
-} from "@mui/material";
+import { Box, List, ListItem, ListItemText, Typography } from "@mui/material";
 import React from "react";
 
 export default function ServicesCard({ icon, name, tech }) {

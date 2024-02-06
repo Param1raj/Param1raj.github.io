@@ -1,7 +1,5 @@
 import { Box, Button, Typography } from "@mui/material";
-import { Container, Heading } from "../Projects/ProjectStyle";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import { Image } from "@chakra-ui/react";
 import DockerImage from "../../assets/docker_icon_146192.png";
 import JSImage from "../../assets/javascript_icon_130900.png";
 import TSImage from "../../assets/file_type_typescript_official_icon_130107.png";

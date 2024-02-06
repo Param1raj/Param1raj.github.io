@@ -1,6 +1,4 @@
 import { Box, Typography, Button } from "@mui/material";
-import { Intro, Title } from "./HeaderStyle";
-import { background } from "@chakra-ui/react";
 // import Resume from './ParamRaj_Resume.pdf';
 
 export default function Header() {

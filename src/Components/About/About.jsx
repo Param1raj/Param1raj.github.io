@@ -6,9 +6,6 @@ import CallIcon from "@mui/icons-material/Call";
 import ProfilePicture from "./param.png";
 // import { Link } from "react-router-dom";
 export default function About() {
-  const openMailBox = () => {
-    window.open("mailto:paramraj067@gmail.com");
-  };
   return (
     // <>
     <Box

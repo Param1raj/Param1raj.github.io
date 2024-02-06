@@ -1,5 +1,4 @@
 import React from "react";
-import { Boxes, BoxesItems, Headline, Image, Text } from "./SkillsStyle";
 import { Box, Typography } from "@mui/material";
 import AndroidIcon from "@mui/icons-material/Android";
 import CodeIcon from "@mui/icons-material/Code";
