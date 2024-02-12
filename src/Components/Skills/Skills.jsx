@@ -11,6 +11,7 @@ import ReduxImage from "../../assets/redux_original_logo_icon_146365.png";
 import ExpressImage from "../../assets/express_original_logo_icon_146527.png";
 import GraphqlImage from "../../assets/file_type_graphql_icon_130564.png";
 import SkillCard from "./SkillCard";
+import FlowUpAnimation from "../Animation/FlowUpAnimation";
 // import { Boxes, Box, Image, Head } from "./ServicesStyle";
 
 const SkillList = [
@@ -129,69 +130,79 @@ export default function Skills() {
             flexDirection={"column"}
             rowGap={"20px"}
           >
-            <Box>
-              <Typography color={"#A39E9E"}>My Skills</Typography>
-            </Box>
+            <FlowUpAnimation>
+              <Box>
+                <Typography color={"#A39E9E"}>My Skills</Typography>
+              </Box>
+            </FlowUpAnimation>
             <Box color={"white"}>
-              <Typography
-                fontSize={{
-                  xs: "2.1rem",
-                  sm: "2.7rem",
-                  md: "2.7rem",
-                  lg: "2.7rem",
-                  xl: "2.7rem",
-                }}
-              >
-                Let’s Explore Popular
-              </Typography>
-              <Typography
-                fontSize={{
-                  xs: "2.1rem",
-                  sm: "2.7rem",
-                  md: "2.7rem",
-                  lg: "2.7rem",
-                  xl: "2.7rem",
-                }}
-                color={"#AA7000"}
-              >
-                Skills & Experience
-              </Typography>
+              <FlowUpAnimation>
+                <Typography
+                  fontSize={{
+                    xs: "2.1rem",
+                    sm: "2.7rem",
+                    md: "2.7rem",
+                    lg: "2.7rem",
+                    xl: "2.7rem",
+                  }}
+                >
+                  Let’s Explore Popular
+                </Typography>
+              </FlowUpAnimation>
+              <FlowUpAnimation>
+                <Typography
+                  fontSize={{
+                    xs: "2.1rem",
+                    sm: "2.7rem",
+                    md: "2.7rem",
+                    lg: "2.7rem",
+                    xl: "2.7rem",
+                  }}
+                  color={"#AA7000"}
+                >
+                  Skills & Experience
+                </Typography>
+              </FlowUpAnimation>
             </Box>
             <Box>
-              <Typography
-                color={"white"}
-                width={{ xs: "100%", sm: "90%" }}
-                fontSize={{
-                  xs: "0.9rem",
-                  sm: "1rem",
-                }}
-              >
-                Delve into my skill set, where React and Next.js expertise
-                converges with strong proficiency in JavaScript and Express.
-                This section encapsulates my ability to architect robust and
-                responsive web applications, showcasing a blend of front-end
-                finesse and powerful back-end development skills.
-              </Typography>
+              <FlowUpAnimation>
+                <Typography
+                  color={"white"}
+                  width={{ xs: "100%", sm: "90%" }}
+                  fontSize={{
+                    xs: "0.9rem",
+                    sm: "1rem",
+                  }}
+                >
+                  Delve into my skill set, where React and Next.js expertise
+                  converges with strong proficiency in JavaScript and Express.
+                  This section encapsulates my ability to architect robust and
+                  responsive web applications, showcasing a blend of front-end
+                  finesse and powerful back-end development skills.
+                </Typography>
+              </FlowUpAnimation>
             </Box>
-            <Box>
-              <Button
-                sx={{
-                  borderRadius: "10px",
-                  padding: "15px",
-                  background: "#AA7000",
-                  transition: "opacity 500ms ease",
-                  ":hover": {
+            <FlowUpAnimation>
+              <Box>
+                <Button
+                  sx={{
+                    borderRadius: "10px",
+                    padding: "15px",
                     background: "#AA7000",
-                    opacity: "0.8",
-                  },
-                }}
-                variant="contained"
-                endIcon={<ChevronRightIcon />}
-              >
-                {" "}
-                Learn More
-              </Button>
-            </Box>
+                    transition: "opacity 500ms ease",
+                    ":hover": {
+                      background: "#AA7000",
+                      opacity: "0.8",
+                    },
+                  }}
+                  variant="contained"
+                  endIcon={<ChevronRightIcon />}
+                >
+                  {" "}
+                  Learn More
+                </Button>
+              </Box>
+            </FlowUpAnimation>
           </Box>
           <Box
             // border={"1px solid red"}
@@ -210,12 +221,14 @@ export default function Skills() {
           >
             {SkillList.map(({ SkillName, SkillIcon, year }) => {
               return (
-                <SkillCard
-                  key={SkillName}
-                  icon={SkillIcon}
-                  name={SkillName}
-                  years={year}
-                />
+                <FlowUpAnimation>
+                  <SkillCard
+                    key={SkillName}
+                    icon={SkillIcon}
+                    name={SkillName}
+                    years={year}
+                  />
+                </FlowUpAnimation>
               );
             })}
           </Box>

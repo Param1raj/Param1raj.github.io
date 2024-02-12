@@ -3,6 +3,8 @@ import { Box, Typography } from "@mui/material";
 import AndroidIcon from "@mui/icons-material/Android";
 import CodeIcon from "@mui/icons-material/Code";
 import ServicesCard from "./ServicesCard";
+import { motion } from "framer-motion";
+import FlowUpAnimation from "../Animation/FlowUpAnimation";
 
 const ServiceList = [
   {
@@ -35,8 +37,31 @@ const ServiceList = [
   },
 ];
 
+const parent = {
+  hidden: {
+    // opacity: 0,
+  },
+  visible: {
+    // opacity: 1,
+    transition: {
+      delay: 1,
+      when: "beforeChildren",
+      staggerChildren: 0.4,
+      duration: 1,
+    },
+  },
+};
+const child = {
+  hidden: {
+    opacity: 0,
+    y: 30,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+  },
+};
 export default function Services() {
-  // <a href="https://iconscout.com/icons/code" target="_blank">Code Icon</a> by <a href="https://iconscout.com/contributors/maninderkaur" target="_blank">maninderkaur</a>
   return (
     <>
       <Box
@@ -54,35 +79,18 @@ export default function Services() {
             padding: { xs: "40px", md: "30px" },
           }}
         >
-          <Typography color={"#A39E9E"}>Serives</Typography>
+          <FlowUpAnimation>
+            <Typography color={"#A39E9E"}>Serives</Typography>
+          </FlowUpAnimation>
           <Box>
-            <Typography fontSize={{ xs: "2rem", sm: "2.7rem" }}>
-              My <span style={{ color: "#AA7000" }}>Special Service</span> For
-              your Business Development
-            </Typography>
-            <Typography fontSize={{ xs: "2rem", sm: "2.7rem" }}></Typography>
+            <FlowUpAnimation>
+              <Typography fontSize={{ xs: "2rem", sm: "2.7rem" }}>
+                My <span style={{ color: "#AA7000" }}>Special Service</span> For
+                your Business Development
+              </Typography>
+            </FlowUpAnimation>
           </Box>
         </Box>
-        {/* <Boxes>
-          <BoxesItems>
-            <div style={{ padding: "20px" }}>
-              <Image src="https://flaticons.net/custom.php?i=YNxxtzyT05DMwibIVIeIxbhpeqkyI7&format=png&size=256" />
-            </div>
-            <Text>WebDesign</Text>
-          </BoxesItems>
-          <BoxesItems>
-            <div style={{ padding: "20px" }}>
-              <Image src="https://flaticons.net/custom.php?i=yzkZtjGI8bQX3UJIVIaIamcelop2uX&format=png&size=256" />
-            </div>
-            <Text>Front End</Text>
-          </BoxesItems>
-          <BoxesItems>
-            <div style={{ padding: "20px" }}>
-              <Image src="https://flaticons.net/custom.php?i=r5QFYZtNaD4QiBIxIkIxDhjPZYlu5&format=png&size=256" />
-            </div>
-            <Text>Back End</Text>
-          </BoxesItems>
-        </Boxes> */}
         <Box
           // border={"1px solid blue"}
           width={"100%"}
@@ -92,25 +100,34 @@ export default function Services() {
           justifyContent={"center"}
           alignItems={"center"}
         >
-          <Box
-            minWidth={{ xs: "60%", md: "40%" }}
-            height={"90%"}
-            display={"grid"}
-            gridTemplateColumns={{ sm: "repeat(1,1fr)", md: "repeat(2,1fr)" }}
-            columnGap={{ md: "2rem" }}
-            rowGap={{ xs: "2rem", md: "" }}
-            // border={"1px solid green"}
+          <motion.div
+            variants={parent}
+            initial="hidden"
+            whileInView={"visible"}
+            viewport={{ once: true }}
           >
-            {ServiceList.map(({ ServiceIcon, ServiceName, Teckstacks }) => {
-              return (
-                <ServicesCard
-                  icon={ServiceIcon}
-                  name={ServiceName}
-                  tech={Teckstacks}
-                />
-              );
-            })}
-          </Box>
+            <Box
+              minWidth={{ xs: "60%", md: "40%" }}
+              height={"90%"}
+              display={"grid"}
+              gridTemplateColumns={{ sm: "repeat(1,1fr)", md: "repeat(2,1fr)" }}
+              columnGap={{ md: "2rem" }}
+              rowGap={{ xs: "2rem", md: "" }}
+              // border={"1px solid green"}
+            >
+              {ServiceList.map(({ ServiceIcon, ServiceName, Teckstacks }) => {
+                return (
+                  <motion.div variants={child}>
+                    <ServicesCard
+                      icon={ServiceIcon}
+                      name={ServiceName}
+                      tech={Teckstacks}
+                    />
+                  </motion.div>
+                );
+              })}
+            </Box>
+          </motion.div>
         </Box>
       </Box>
     </>

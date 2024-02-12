@@ -15,6 +15,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { Link } from "react-scroll";
 // import { ScrollLink } from "react-scroll";
+import { motion } from "framer-motion";
 
 const drawerWidth = 240;
 const navItems = [
@@ -27,6 +28,28 @@ const navItems = [
   { name: "Resume", link: "" },
 ];
 
+const parent = {
+  hidden: {
+    scaleY: 0,
+    opacity: 0,
+  },
+  visible: {
+    scaleY: 1,
+    opacity: 1,
+    transition: {
+      when: "beforeChildren",
+      duration: 1,
+    },
+  },
+};
+const child = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
 function DrawerAppBar(props) {
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -60,86 +83,96 @@ function DrawerAppBar(props) {
 
   return (
     <Box sx={{ display: "flex" }}>
-      {/* <CssBaseline /> */}
       <AppBar
         component="nav"
         sx={{
           background:
             "linear-gradient(90deg, rgba(0,0,0,1) 33%, rgba(121,9,9,1) 73%, rgba(255,171,0,0.6755077030812324) 100%)",
+          // zIndex: 10,
         }}
       >
-        <Toolbar
-          sx={{
-            margin: "10px",
-            // border: "1px solid white",
-          }}
-        >
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            edge="start"
-            onClick={handleDrawerToggle}
+        <motion.div variants={parent} initial="hidden" animate="visible">
+          <Toolbar
             sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              columnGap: "10px",
-              ":focus": {
-                outline: "none",
-              },
+              margin: "10px",
+              // border: "1px solid white",
             }}
           >
-            <MenuIcon />
-          </IconButton>
-          <Box
-            sx={{
-              display: "flex",
-              justifyContent: "space-between",
-              width: "100%",
-            }}
-          >
-            <Typography
-              variant="h6"
-              component="div"
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
               sx={{
-                display: {
-                  xs: "block",
-                  fontSize: "1.6rem",
-                  fontWeight: "bold",
+                mr: 2,
+                display: { xs: "flex", md: "none" },
+                columnGap: "10px",
+                ":focus": {
+                  outline: "none",
                 },
               }}
             >
-              Param Raj
-            </Typography>
-            <Box
-              sx={{
-                display: { xs: "none", md: "flex" },
-                width: { sm: "80%", md: "70%", lg: "50%", xl: "50%" },
-                // border: "1px solid red",
-                justifyContent: "space-evenly",
+              <MenuIcon />
+            </IconButton>
+            <motion.div
+              variants={child}
+              style={{
+                width: "100%",
               }}
             >
-              {navItems.map(({ name, link }) => (
-                <Link to={link} smooth={true} spy={true}>
-                  <Button
-                    key={name}
-                    sx={{
-                      color: "#fff",
-                      fontSize: "1.1rem",
-                      ":focus": {
-                        outline: "none",
-                      },
-                    }}
-                    variant="text"
-                  >
-                    {/* <ScrollLink scrollTo > */}
-                    {name}
-                    {/* </ScrollLink> */}
-                  </Button>
-                </Link>
-              ))}
-            </Box>
-          </Box>
-        </Toolbar>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+
+                  width: "100%",
+                }}
+              >
+                <Typography
+                  variant="h6"
+                  component="div"
+                  sx={{
+                    display: {
+                      xs: "block",
+                      fontSize: "1.6rem",
+                      fontWeight: "bold",
+                    },
+                  }}
+                >
+                  Param Raj
+                </Typography>
+                <Box
+                  sx={{
+                    display: { xs: "none", md: "flex" },
+                    width: { sm: "80%", md: "70%", lg: "50%", xl: "50%" },
+                    // border: "1px solid red",
+                    justifyContent: "space-evenly",
+                  }}
+                >
+                  {navItems.map(({ name, link }) => (
+                    <Link to={link} smooth={true} spy={true}>
+                      <Button
+                        key={name}
+                        sx={{
+                          color: "#fff",
+                          fontSize: "1.1rem",
+                          ":focus": {
+                            outline: "none",
+                          },
+                        }}
+                        variant="text"
+                      >
+                        {/* <ScrollLink scrollTo > */}
+                        {name}
+                        {/* </ScrollLink> */}
+                      </Button>
+                    </Link>
+                  ))}
+                </Box>
+              </Box>
+            </motion.div>
+          </Toolbar>
+        </motion.div>
       </AppBar>
       <nav>
         <Drawer

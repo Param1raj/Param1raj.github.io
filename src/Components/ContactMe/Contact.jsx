@@ -19,6 +19,8 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PhoneEnabledOutlinedIcon from "@mui/icons-material/PhoneEnabledOutlined";
 import TitleOutlinedIcon from "@mui/icons-material/TitleOutlined";
+import { motion } from "framer-motion";
+import FlowUpAnimation from "../Animation/FlowUpAnimation";
 const Experties = [
   "2+ Years Of Experience",
   "Professional Web Developer",
@@ -185,36 +187,44 @@ export default function ContactMe() {
           flexDirection={"column"}
           rowGap={"20px"}
         >
-          <Typography color={"#A39E9E"}>Get In Touch</Typography>
-          <Typography
-            color={"white"}
-            fontSize={"2.7rem"}
-            width={{ sm: "85%", xl: "80%" }}
-            lineHeight={"1.2"}
-          >
-            Let’s Talk For Your{" "}
-            <span style={{ color: "#AA7000" }}>Next Projects</span>
-          </Typography>
-          <Typography fontSize={"1rem"} width={"85%"} color={"#959595"}>
-            Sed ut perspiciatis unde omnin natus totam rem aperiam eaque
-            inventore veritatis
-          </Typography>
+          <FlowUpAnimation>
+            <Typography color={"#A39E9E"}>Get In Touch</Typography>
+          </FlowUpAnimation>
+          <FlowUpAnimation style={{ width: "100%" }}>
+            <Typography
+              color={"white"}
+              fontSize={"2.7rem"}
+              width={{ sm: "85%", xl: "80%" }}
+              lineHeight={"1.2"}
+            >
+              Let’s Talk For Your{" "}
+              <span style={{ color: "#AA7000" }}>Next Projects</span>
+            </Typography>
+          </FlowUpAnimation>
+          <FlowUpAnimation>
+            <Typography fontSize={"1rem"} width={"85%"} color={"#959595"}>
+              Sed ut perspiciatis unde omnin natus totam rem aperiam eaque
+              inventore veritatis
+            </Typography>
+          </FlowUpAnimation>
           <Box>
             <List>
               {Experties.map((line) => {
                 return (
-                  <ListItem key={line} sx={{ padding: "5px" }}>
-                    <ListItemIcon>
-                      <CheckCircleIcon
-                        sx={{ color: "#AA7000" }}
-                        fontSize="large"
+                  <FlowUpAnimation>
+                    <ListItem key={line} sx={{ padding: "5px" }}>
+                      <ListItemIcon>
+                        <CheckCircleIcon
+                          sx={{ color: "#AA7000" }}
+                          fontSize="large"
+                        />
+                      </ListItemIcon>
+                      <ListItemText
+                        primary={line}
+                        sx={{ color: "#fff", fontWeight: "bold" }}
                       />
-                    </ListItemIcon>
-                    <ListItemText
-                      primary={line}
-                      sx={{ color: "#fff", fontWeight: "bold" }}
-                    />
-                  </ListItem>
+                    </ListItem>
+                  </FlowUpAnimation>
                 );
               })}
             </List>
@@ -239,65 +249,73 @@ export default function ContactMe() {
             flexDirection={"column"}
             gap={{ xs: "1rem", sm: "2rem" }}
           >
-            <Box
-              display={"grid"}
-              gridTemplateColumns={{ xs: "100%", sm: "repeat(2,1fr)" }}
-              gap={{ xs: "1em", sm: "10px" }}
-            >
-              <InputComponent
-                Icon={<AccountCircleOutlinedIcon sx={IconStyles} />}
-                register={() => register("name", { required: true })}
-              />
-              <InputComponent
-                placeholder="Email"
-                Icon={<EmailOutlinedIcon sx={IconStyles} />}
-                register={() => register("email", { required: true })}
+            <FlowUpAnimation>
+              <Box
+                display={"grid"}
+                gridTemplateColumns={{ xs: "100%", sm: "repeat(2,1fr)" }}
+                gap={{ xs: "1em", sm: "10px" }}
+              >
+                <InputComponent
+                  Icon={<AccountCircleOutlinedIcon sx={IconStyles} />}
+                  register={() => register("name", { required: true })}
+                />
+                <InputComponent
+                  placeholder="Email"
+                  Icon={<EmailOutlinedIcon sx={IconStyles} />}
+                  register={() => register("email", { required: true })}
+                />
+              </Box>
+            </FlowUpAnimation>
+            <FlowUpAnimation>
+              <Box
+                display={"grid"}
+                gridTemplateColumns={{ xs: "100%", sm: "repeat(2,1fr)" }}
+                gap={{ xs: "1em", sm: "10px" }}
+              >
+                <InputComponent
+                  placeholder="Phone"
+                  Icon={<PhoneEnabledOutlinedIcon sx={IconStyles} />}
+                  register={() => register("phone", { required: true })}
+                />
+                <InputComponent
+                  placeholder="Subject"
+                  Icon={<TitleOutlinedIcon sx={IconStyles} />}
+                  register={() => register("subject", { required: true })}
+                />
+              </Box>
+            </FlowUpAnimation>
+          </Box>
+          <FlowUpAnimation>
+            <Box>
+              <MaxHeightTextarea
+                register={() => register("message", { required: true })}
               />
             </Box>
-            <Box
-              display={"grid"}
-              gridTemplateColumns={{ xs: "100%", sm: "repeat(2,1fr)" }}
-              gap={{ xs: "1em", sm: "10px" }}
-            >
-              <InputComponent
-                placeholder="Phone"
-                Icon={<PhoneEnabledOutlinedIcon sx={IconStyles} />}
-                register={() => register("phone", { required: true })}
-              />
-              <InputComponent
-                placeholder="Subject"
-                Icon={<TitleOutlinedIcon sx={IconStyles} />}
-                register={() => register("subject", { required: true })}
-              />
-            </Box>
-          </Box>
-          <Box>
-            <MaxHeightTextarea
-              register={() => register("message", { required: true })}
-            />
-          </Box>
-          <Input
-            sx={{
-              width: { xs: "6rem", sm: "12rem" },
-              marginLeft: "5px",
-              padding: { xs: "10px", sm: "20px" },
-              background: "#AA7000",
-              borderRadius: "20px",
-              // border: "1px solid red",
-              ":hover": {
+          </FlowUpAnimation>
+          <FlowUpAnimation>
+            <Input
+              sx={{
+                width: { xs: "6rem", sm: "12rem" },
+                marginLeft: "5px",
+                padding: { xs: "10px", sm: "20px" },
                 background: "#AA7000",
-                opacity: "0.9",
-                cursor: "pointer",
-              },
-              "&:focus-visible": {
-                border: "0px ",
-              },
-            }}
-            type="submit"
-            disableUnderline
-          >
-            Send Message
-          </Input>
+                borderRadius: "20px",
+                // border: "1px solid red",
+                ":hover": {
+                  background: "#AA7000",
+                  opacity: "0.9",
+                  cursor: "pointer",
+                },
+                "&:focus-visible": {
+                  border: "0px ",
+                },
+              }}
+              type="submit"
+              disableUnderline
+            >
+              Send Message
+            </Input>
+          </FlowUpAnimation>
         </Box>
       </Box>
     </Box>
