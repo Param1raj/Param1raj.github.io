@@ -18,17 +18,17 @@ const SkillList = [
   {
     SkillIcon: JSImage,
     SkillName: "JavaScript",
-    year: 1,
+    year: 2,
   },
   {
     SkillIcon: TSImage,
     SkillName: "TypeScript",
-    year: 1,
+    year: 2,
   },
   {
     SkillIcon: ReactImage,
     SkillName: "ReactJS",
-    year: 1,
+    year: 2,
   },
   {
     SkillIcon: NextImage,
@@ -43,17 +43,17 @@ const SkillList = [
   {
     SkillIcon: ReduxImage,
     SkillName: "Redux",
-    year: 1,
+    year: 2,
   },
   {
     SkillIcon: NodeImage,
     SkillName: "Nodejs",
-    year: 1,
+    year: 2,
   },
   {
     SkillIcon: ExpressImage,
     SkillName: "Express",
-    year: 1,
+    year: 2,
   },
   {
     SkillIcon: GraphqlImage,

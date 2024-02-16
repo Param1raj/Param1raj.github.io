@@ -19,8 +19,13 @@ import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import PhoneEnabledOutlinedIcon from "@mui/icons-material/PhoneEnabledOutlined";
 import TitleOutlinedIcon from "@mui/icons-material/TitleOutlined";
+import { Resend } from "resend";
 import { motion } from "framer-motion";
 import FlowUpAnimation from "../Animation/FlowUpAnimation";
+import Email from "./Email";
+import sendEmail from "./sendEmail";
+const resend = new Resend(process.env.REACT_APP_RESEND_API_KEY);
+// console.log("API KEY", process.env.REACT_APP_RESEND_API_KEY);
 const Experties = [
   "2+ Years Of Experience",
   "Professional Web Developer",
@@ -238,8 +243,11 @@ export default function ContactMe() {
           flexDirection={"column"}
           gap={{ xs: "1rem", sm: "2rem" }}
           as={"form"}
-          onSubmit={handleSubmit((data) => {
-            console.log(data);
+          onSubmit={handleSubmit(async (data) => {
+            const { phone, from, to, name, subject, email } = data;
+
+            await sendEmail(from, to, subject, name, email, phone);
+            // console.log(res, "responce");
             reset();
           })}
         >

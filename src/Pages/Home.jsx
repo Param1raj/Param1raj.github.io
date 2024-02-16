@@ -7,6 +7,7 @@ import Skills from "../Components/Skills/Skills";
 import { useRef } from "react";
 import DrawerAppBar from "../Components/Navbar/MuiNav";
 import Footer from "../Components/Footer/Footer";
+import Email from "../Components/ContactMe/Email";
 // import { Callhere } from "../Components/Callhere/Callhere";
 export default function Home() {
   const Homeref = useRef(null);
@@ -24,6 +25,7 @@ export default function Home() {
       <Skills ref={Skillref} />
       <Projects ref={Projectref} />
       <ContactMe ref={Contactref} />
+      {/* <Email /> */}
       <Footer />
     </>
   );

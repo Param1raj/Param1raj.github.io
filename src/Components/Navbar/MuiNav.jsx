@@ -55,20 +55,36 @@ function DrawerAppBar(props) {
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
+    console.log("clicked");
     setMobileOpen((prevState) => !prevState);
   };
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
+        Param Raj
       </Typography>
       <Divider />
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
-            <Link to={item.link} smooth={true} spy={true}>
-              <ListItemButton sx={{ textAlign: "center" }}>
+            <Link
+              to={item.link}
+              smooth={true}
+              spy={true}
+              onClick={handleDrawerToggle}
+              style={{
+                width: "100%",
+                display: "flex",
+                // justifyContent: "left",
+                // border: "1px solid red",
+                justifyContent: "flex-start",
+              }}
+            >
+              <ListItemButton
+                sx={{ textAlign: "left" }}
+                // onClick={handleDrawerToggle}
+              >
                 <ListItemText primary={item.name} />
               </ListItemButton>
             </Link>
