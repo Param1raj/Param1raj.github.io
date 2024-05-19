@@ -242,7 +242,7 @@ export default function ContactMe() {
           display={"flex"}
           flexDirection={"column"}
           gap={{ xs: "1rem", sm: "2rem" }}
-          as={"form"}
+          component={"form"}
           onSubmit={handleSubmit(async (data) => {
             const { phone, from, to, name, subject, email } = data;
 
@@ -318,11 +318,10 @@ export default function ContactMe() {
                   border: "0px ",
                 },
               }}
+              value="Send Message"
               type="submit"
               disableUnderline
-            >
-              Send Message
-            </Input>
+            ></Input>
           </FlowUpAnimation>
         </Box>
       </Box>

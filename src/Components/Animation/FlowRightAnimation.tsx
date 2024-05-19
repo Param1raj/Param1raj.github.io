@@ -1,6 +1,12 @@
-import React from "react";
-import { motion } from "framer-motion";
-function FlowRightAnimation({ children, style }) {
+import React, { ReactNode } from "react";
+import { MotionStyle, motion } from "framer-motion";
+
+type FlowLeftAnimationPropsType = React.PropsWithChildren<{
+  children: ReactNode;
+  style?: MotionStyle;
+}>;
+
+function FlowRightAnimation({ children, style }: FlowLeftAnimationPropsType) {
   return (
     <motion.div
       style={{ ...style }}

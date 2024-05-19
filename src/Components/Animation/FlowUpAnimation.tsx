@@ -1,6 +1,12 @@
-import React from "react";
-import { motion } from "framer-motion";
-function FlowUpAnimation({ children, style }) {
+import React, { ReactNode } from "react";
+import { MotionStyle, motion } from "framer-motion";
+
+type FlowUpAnimationPropsType = React.PropsWithChildren<{
+  children: ReactNode;
+  style?: MotionStyle;
+}>;
+
+function FlowUpAnimation({ children, style }: FlowUpAnimationPropsType) {
   return (
     <motion.div
       style={{ ...style }}

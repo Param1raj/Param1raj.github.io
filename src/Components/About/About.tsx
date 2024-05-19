@@ -1,5 +1,5 @@
 import { Box, Link, Typography } from "@mui/material";
-import styled from "styled-components";
+// import styled from "styled-components";
 import CheckIcon from "@mui/icons-material/Check";
 import EmailOutlinedIcon from "@mui/icons-material/EmailOutlined";
 import CallIcon from "@mui/icons-material/Call";
@@ -33,7 +33,6 @@ const child = {
 };
 export default function About() {
   return (
-    // <>
     <Box
       id="about"
       sx={{
@@ -239,7 +238,8 @@ export default function About() {
         >
           <Box
             zIndex={1}
-            as={"img"}
+            // as={"img"}
+            component={"img"}
             src={ProfilePicture}
             maxWidth={{ xs: "80%", sm: "100%" }}
             maxHeight={"25rem"}
@@ -252,10 +252,10 @@ export default function About() {
   );
 }
 
-export const Paragraph = styled.div`
-  font-size: 1.5vw;
-  text-align: initial;
-  @media all and (min-width: 320px) and (max-width: 500px) {
-    font-size: 2.6vw;
-  }
-`;
+// export const Paragraph = styled.div`
+//   font-size: 1.5vw;
+//   text-align: initial;
+//   @media all and (min-width: 320px) and (max-width: 500px) {
+//     font-size: 2.6vw;
+//   }
+// `;
