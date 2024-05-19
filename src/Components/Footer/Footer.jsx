@@ -120,7 +120,7 @@ function Footer() {
             }}
           >
             {Links.map(({ name, link }) => (
-              <FooterLink link={link} name={name} />
+              <FooterLink link={link} name={name} key={name} />
             ))}
           </Box>
         </Box>

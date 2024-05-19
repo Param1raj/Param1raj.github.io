@@ -221,7 +221,7 @@ export default function Skills() {
           >
             {SkillList.map(({ SkillName, SkillIcon, year }) => {
               return (
-                <FlowUpAnimation>
+                <FlowUpAnimation key={SkillName}>
                   <SkillCard
                     key={SkillName}
                     icon={SkillIcon}

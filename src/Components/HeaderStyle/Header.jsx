@@ -33,11 +33,11 @@ const childVarient = {
 };
 
 export default function Header() {
-  function handleClick() {
-    return window.open(
+  const handleClick = () => {
+    window.open(
       "https://drive.google.com/u/0/uc?id=1N-tpdNqLwWpmLh2G_YlrWN4DzLNTvq2K&export=download"
     );
-  }
+  };
 
   return (
     <Box
@@ -92,8 +92,6 @@ export default function Header() {
           <Box sx={{ display: "flex" }}>
             <a
               href="/"
-              title="ParamRaj_Resume.pdf"
-              download={"ParamRaj_Resume.pdf"}
               onClick={handleClick}
               // style={{
               //   alignSelf: "left",

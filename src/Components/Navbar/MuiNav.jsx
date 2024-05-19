@@ -13,7 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 // import { ScrollLink } from "react-scroll";
 import { motion } from "framer-motion";
 
@@ -51,14 +51,18 @@ const child = {
   },
 };
 function DrawerAppBar(props) {
-  const { window } = props;
+  const { windows } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
   const handleDrawerToggle = () => {
     console.log("clicked");
     setMobileOpen((prevState) => !prevState);
   };
-
+  const handleClick = () => {
+    window.open(
+      "https://drive.google.com/u/0/uc?id=1N-tpdNqLwWpmLh2G_YlrWN4DzLNTvq2K&export=download"
+    );
+  };
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <Typography variant="h6" sx={{ my: 2 }}>
@@ -68,26 +72,35 @@ function DrawerAppBar(props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item.name} disablePadding>
-            <Link
-              to={item.link}
-              smooth={true}
-              spy={true}
-              onClick={handleDrawerToggle}
-              style={{
-                width: "100%",
-                display: "flex",
-                // justifyContent: "left",
-                // border: "1px solid red",
-                justifyContent: "flex-start",
-              }}
-            >
+            {item.name === "Resume" ? (
               <ListItemButton
                 sx={{ textAlign: "left" }}
                 // onClick={handleDrawerToggle}
               >
                 <ListItemText primary={item.name} />
               </ListItemButton>
-            </Link>
+            ) : (
+              <ScrollLink
+                to={item.link}
+                smooth={true}
+                spy={true}
+                onClick={handleDrawerToggle}
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  // justifyContent: "left",
+                  // border: "1px solid red",
+                  justifyContent: "flex-start",
+                }}
+              >
+                <ListItemButton
+                  sx={{ textAlign: "left" }}
+                  // onClick={handleDrawerToggle}
+                >
+                  <ListItemText primary={item.name} />
+                </ListItemButton>
+              </ScrollLink>
+            )}
           </ListItem>
         ))}
       </List>
@@ -95,7 +108,7 @@ function DrawerAppBar(props) {
   );
 
   const container =
-    window !== undefined ? () => window().document.body : undefined;
+    windows !== undefined ? () => windows().document.body : undefined;
 
   return (
     <Box sx={{ display: "flex" }}>
@@ -166,23 +179,42 @@ function DrawerAppBar(props) {
                   }}
                 >
                   {navItems.map(({ name, link }) => (
-                    <Link to={link} smooth={true} spy={true}>
-                      <Button
-                        key={name}
-                        sx={{
-                          color: "#fff",
-                          fontSize: "1.1rem",
-                          ":focus": {
-                            outline: "none",
-                          },
-                        }}
-                        variant="text"
-                      >
-                        {/* <ScrollLink scrollTo > */}
-                        {name}
-                        {/* </ScrollLink> */}
-                      </Button>
-                    </Link>
+                    <React.Fragment key={name}>
+                      {name === "Resume" ? (
+                        <Button
+                          sx={{
+                            color: "#fff",
+                            fontSize: "1.1rem",
+                            ":focus": {
+                              outline: "none",
+                            },
+                          }}
+                          variant="text"
+                          onClick={handleClick}
+                        >
+                          {/* <ScrollLink scrollTo > */}
+                          {name}
+                          {/* </ScrollLink> */}
+                        </Button>
+                      ) : (
+                        <ScrollLink to={link} smooth={true} spy={true}>
+                          <Button
+                            sx={{
+                              color: "#fff",
+                              fontSize: "1.1rem",
+                              ":focus": {
+                                outline: "none",
+                              },
+                            }}
+                            variant="text"
+                          >
+                            {/* <ScrollLink scrollTo > */}
+                            {name}
+                            {/* </ScrollLink> */}
+                          </Button>
+                        </ScrollLink>
+                      )}
+                    </React.Fragment>
                   ))}
                 </Box>
               </Box>
@@ -219,7 +251,7 @@ DrawerAppBar.propTypes = {
    * Injected by the documentation to work in an iframe.
    * You won't need it on your project.
    */
-  window: PropTypes.func,
+  windows: PropTypes.func,
 };
 
 export default DrawerAppBar;

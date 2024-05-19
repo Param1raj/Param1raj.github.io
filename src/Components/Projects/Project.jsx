@@ -188,6 +188,7 @@ export default function Projects() {
                 //   </Box>
                 // </Box>
                 <ProjectCard
+                  key={ProjectName}
                   name={ProjectName}
                   banner={ProjectBanner}
                   direction={Direction}

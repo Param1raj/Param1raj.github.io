@@ -117,7 +117,7 @@ export default function Services() {
             >
               {ServiceList.map(({ ServiceIcon, ServiceName, Teckstacks }) => {
                 return (
-                  <motion.div variants={child}>
+                  <motion.div variants={child} key={ServiceName}>
                     <ServicesCard
                       icon={ServiceIcon}
                       name={ServiceName}

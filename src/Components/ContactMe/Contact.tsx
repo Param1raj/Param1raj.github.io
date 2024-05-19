@@ -216,7 +216,7 @@ export default function ContactMe() {
             <List>
               {Experties.map((line) => {
                 return (
-                  <FlowUpAnimation>
+                  <FlowUpAnimation key={line}>
                     <ListItem key={line} sx={{ padding: "5px" }}>
                       <ListItemIcon>
                         <CheckCircleIcon
