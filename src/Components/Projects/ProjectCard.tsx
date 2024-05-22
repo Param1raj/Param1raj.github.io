@@ -4,6 +4,7 @@ import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import FlowRightAnimation from "../Animation/FlowRightAnimation";
+import { Project } from "./Project";
 
 const container = {
   hidden: {
@@ -14,7 +15,14 @@ const container = {
   },
 };
 
-function ProjectCard({ name, discription, banner, direction, link }) {
+function ProjectCard({
+  name,
+  description,
+  banner,
+  direction,
+  link,
+  techStack,
+}: Project) {
   return (
     <motion.div
       style={{ width: "100%" }}
@@ -40,7 +48,7 @@ function ProjectCard({ name, discription, banner, direction, link }) {
       >
         {/* <motion.div> */}
         <Box
-          as={"img"}
+          // as={"img"}
           src={banner}
           width={{ xs: "100%", sm: "100%", md: "100%", lg: "50%" }}
           height={{
@@ -50,17 +58,19 @@ function ProjectCard({ name, discription, banner, direction, link }) {
             lg: "25rem",
           }}
           sx={{ aspectRatio: 1 / 1 }}
+          component={"img"}
         />
         {/* </motion.div> */}
         <Box
           width={{ xs: "100%", sm: "100%", md: "100%", lg: "50%" }}
           display={"flex"}
           alignItems={"center"}
+          // border={"1px solid blue"}
           justifyContent={"center"}
         >
           <Box
             width={{ xs: "90%", sm: "90%", md: "80%" }}
-            height={"80%"}
+            height={"fit-content"}
             display={"flex"}
             flexDirection={"column"}
             rowGap={"25px"}
@@ -70,6 +80,7 @@ function ProjectCard({ name, discription, banner, direction, link }) {
               md: "20px",
               lg: "0px",
             }}
+            // border={"1px solid blue"}
           >
             <FlowRightAnimation>
               <Typography
@@ -100,7 +111,27 @@ function ProjectCard({ name, discription, banner, direction, link }) {
               </FlowRightAnimation>
             </a>
             <FlowRightAnimation>
-              <Typography color={"gray"}>{discription}</Typography>
+              <Typography color={"gray"}>{description}</Typography>
+            </FlowRightAnimation>
+            <FlowRightAnimation>
+              <Box display={"flex"}>
+                <Typography sx={{ color: "#AA7000" }}>Tech Stack :</Typography>
+                <Box display={"flex"}>
+                  {techStack.map(
+                    (tech, index) =>
+                      index <= 3 && (
+                        <Typography sx={{ marginLeft: "5px", color: "white" }}>
+                          {tech},
+                        </Typography>
+                      )
+                  )}
+                  {techStack.length > 4 && (
+                    <Typography sx={{ marginLeft: "5px", color: "#AA7000" }}>
+                      +{techStack.length - 4}
+                    </Typography>
+                  )}
+                </Box>
+              </Box>
             </FlowRightAnimation>
             <FlowRightAnimation>
               <a href={link} target="_blank" rel="noreferrer">
@@ -113,6 +144,7 @@ function ProjectCard({ name, discription, banner, direction, link }) {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
+                    // border: "1px solid red",
                     ":hover": {
                       background: "#AA7000",
                       border: "1px solid #AA7000",

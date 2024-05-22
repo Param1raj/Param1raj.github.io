@@ -1,11 +1,19 @@
+import react from "react";
 import { Box, Typography } from "@mui/material";
-import React from "react";
 import Logo from "../../assets/favicon.ico.png";
 import { Link } from "react-scroll";
 // import LocationOnIcon from "@mui/icons-material/LocationOn";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 import CallIcon from "@mui/icons-material/Call";
-function FooterLink({ link, name }) {
+
+export type LinkType = {
+  link: string;
+  name: string;
+};
+
+function FooterLink({ link, name }: LinkType) {
   return (
     <Link to={link}>
       <Typography
@@ -24,7 +32,7 @@ function FooterLink({ link, name }) {
   );
 }
 
-const Links = [
+const Links: LinkType[] = [
   {
     name: "Services",
     link: "services",
@@ -73,7 +81,7 @@ function Footer() {
         // gridTemplateRows={{ xs: "" }}
         rowGap={"20px"}
       >
-        <Link to="home" style={{ "&:hover": { cursor: "pointer" } }}>
+        <Link to="home" smooth={true} spy={true}>
           <Box
             display={"flex"}
             height={"100%"}
@@ -85,7 +93,7 @@ function Footer() {
               src={Logo}
               width={{ xs: "15%", md: "18%", lg: "20%", xl: "15%" }}
               height={"fit-content"}
-              sx={{ borderRadius: "10px" }}
+              sx={{ borderRadius: "10px", ":hover": { cursor: "pointer" } }}
             ></Box>
             <Typography
               color={"white"}
@@ -94,6 +102,12 @@ function Footer() {
                 md: "1.8rem",
                 lg: "2.5rem",
                 xl: "2.7rem",
+              }}
+              sx={{
+                ":hover": {
+                  cursor: "pointer",
+                },
+                // border: "1px solid red",
               }}
               height={"fit-content"}
             >
@@ -105,6 +119,7 @@ function Footer() {
           display={"flex"}
           flexDirection={"column"}
           rowGap={{ xs: "20px", md: "15px", lg: "25px" }}
+          // border={"1px solid blue"}
         >
           <Typography color={"white"} fontWeight={"bold"}>
             Quick Links
@@ -122,6 +137,60 @@ function Footer() {
             {Links.map(({ name, link }) => (
               <FooterLink link={link} name={name} key={name} />
             ))}
+          </Box>
+          <Box
+            display={"flex"}
+            gap={{
+              xs: "1rem",
+              sm: "3rem",
+              md: "1rem",
+              lg: "1.5rem",
+              xl: "2rem",
+            }}
+          >
+            <Box
+              display={"flex"}
+              alignItems={"center"}
+              gap={{
+                xs: "1rem",
+                sm: "2rem",
+                md: "0.5rem",
+                lg: "0.5rem",
+                xl: "1rem",
+              }}
+            >
+              <a
+                href="https://www.linkedin.com/in/param-raj-997aa41ba/"
+                target="_blank"
+              >
+                <LinkedInIcon
+                  sx={{
+                    color: "#0077B5",
+                    width: "30px",
+                    height: "30px",
+                    // transition: "all 1s ease",
+                    ":hover": {
+                      cursor: "pointer",
+                      //  color: "#AA7000"
+                    },
+                  }}
+                />
+              </a>
+              <a href="https://github.com/Param1raj" target="_blank">
+                <GitHubIcon
+                  sx={{
+                    color: "#ffffff",
+                    width: "25px",
+                    height: "25px",
+                    // transition: "all 1s ease",
+                    ":hover": {
+                      cursor: "pointer",
+                      // color: "#AA7000"
+                    },
+                  }}
+                />
+              </a>
+            </Box>
           </Box>
         </Box>
         <Box

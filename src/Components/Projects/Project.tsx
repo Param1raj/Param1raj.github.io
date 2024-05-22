@@ -9,48 +9,93 @@ import ArrowOutwardIcon from "@mui/icons-material/ArrowOutward";
 import FlowUpAnimation from "../Animation/FlowUpAnimation";
 import ProjectCard from "./ProjectCard";
 
-const ProjectList = [
+export type Project = {
+  name: string;
+  description: string;
+  banner: string;
+  direction: string;
+  link: string;
+  techStack: string[];
+};
+
+const ProjectList: Project[] = [
   {
-    ProjectName: "Gita (Yoga Plateform)",
-    ProjectDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus id quibusdam at iure aspernatur porro laborum accusantium et libero, earum consequuntur alias, iste ipsa ad excepturi, officia doloribus facere.",
-    ProjectBanner: GetaBanner,
-    Direction: "row",
+    name: "Gita (Yoga Plateform)",
+    description:
+      "Gita is a yoga online learning plateform. Gita provides some free and paid services or content for learners, at Gita learners can consume content in different formats like video, blogs or books.",
+    banner: GetaBanner,
+    direction: "row",
     link: "https://paramnetlify.netlify.app/",
+    techStack: [
+      "Next.js",
+      "Typescript",
+      "Express.js",
+      "MongoDB",
+      "Material UI",
+      "Framer Motion",
+      "JSON Web Token",
+      "Firebase",
+    ],
   },
   {
-    ProjectName: "Portfolio",
-    ProjectDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus id quibusdam at iure aspernatur porro laborum accusantium et libero, earum consequuntur alias, iste ipsa ad excepturi, officia doloribus facere.",
-    ProjectBanner: PortfolioBanner,
-    Direction: "row-reverce",
+    name: "Portfolio",
+    description:
+      "This is my portfolio website. It has react scrolling for ease in navigating from one to another section, it provides a good idea about me, my tech skills, projects and also a medium to connect with me.",
+    banner: PortfolioBanner,
+    direction: "row-reverce",
     link: "https://param1raj.github.io/",
+    techStack: [
+      "React",
+      "Typescript",
+      "Material UI",
+      "Framer Motion",
+      "React-Scroll",
+      "Resned",
+    ],
   },
   {
-    ProjectName: "TimeCamp Clone",
-    ProjectDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus id quibusdam at iure aspernatur porro laborum accusantium et libero, earum consequuntur alias, iste ipsa ad excepturi, officia doloribus facere.",
-    ProjectBanner: timeCampBanner,
-    Direction: "row",
+    name: "TimeCamp Clone",
+    description:
+      "TimeCamp (clone) is a web-based application to track the activity of computer users and it is dedicated either to freelancers or teams. The tool is a time tracking software to invoice the employees' work based on an hourly rate, measuring the work effectiveness and project management.",
+    banner: timeCampBanner,
+    direction: "row",
     link: "astonishing-sorbet-368da1.netlify.app",
+    techStack: [
+      "React",
+      "Express",
+      "MongoDB",
+      "Chakra UI",
+      "Module CSS",
+      "JSON Web Token",
+    ],
   },
   {
-    ProjectName: "BeautiBebo Clone",
-    ProjectDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus id quibusdam at iure aspernatur porro laborum accusantium et libero, earum consequuntur alias, iste ipsa ad excepturi, officia doloribus facere.",
-    ProjectBanner: BeatibeboBanner,
-    Direction: "row-reverce",
+    name: "BeautiBebo Clone",
+    description:
+      "Beauty Bebo is India’s fastest growing online retail store for the day to day and special occasion need of the Makeup, Skin care, Hair care, Personal care, Mom and Baby care, Fragrance and Ayurveda products. We at Beauty Bebo are committed to provide genuine products on fair price to our customers. We bring worlds premium brands and products for you.",
+    banner: BeatibeboBanner,
+    direction: "row-reverce",
     link: "https://beautibebo-netlify.netlify.app/",
+    techStack: [
+      "React",
+      "Express",
+      "MongoDB",
+      "Chakra UI",
+      "Module CSS",
+      "JSON Web Token",
+    ],
   },
   {
-    ProjectName: "RentoMojo Clone",
-    ProjectDescription:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione minus id quibusdam at iure aspernatur porro laborum accusantium et libero, earum consequuntur alias, iste ipsa ad excepturi, officia doloribus facere.",
-    ProjectBanner: RentomojoBanner,
-    Direction: "row",
+    name: "RentoMojo Clone",
+    description:
+      "RentoMojo is a top-rated appliance rental brand, committed to providing our customers in Gurgaon the very best in furniture, appliances, and electronics. Purchasing a furniture piece, an appliance, or a gadget from the store will cost you thousands of rupees",
+    banner: RentomojoBanner,
+    direction: "row",
     link: "https://rentomojosite.netlify.app",
+    techStack: ["HTML", "CSS", "Javascript"],
   },
 ];
+
 export default function Projects() {
   return (
     <Box sx={{ background: "black", border: "0px solid red" }} id="project">
@@ -82,27 +127,21 @@ export default function Projects() {
           // border={"1px solid red"}
         >
           {ProjectList.map(
-            ({
-              ProjectName,
-              ProjectDescription,
-              ProjectBanner,
-              Direction,
-              link,
-            }) => {
+            ({ name, description, banner, direction, link, techStack }) => {
               return (
                 // <Box
                 //   display={"flex"}
-                //   flexDirection={{
+                //   flexdirection={{
                 //     xs: "column",
                 //     sm: "column",
                 //     md: "column",
-                //     lg: Direction === "row" ? "row" : "row-reverse",
+                //     lg: direction === "row" ? "row" : "row-reverse",
                 //   }}
                 //   width={"100%"}
                 // >
                 //   <Box
                 //     as={"img"}
-                //     src={ProjectBanner}
+                //     src={banner}
                 //     width={{ xs: "100%", sm: "100%", md: "100%", lg: "50%" }}
                 //     height={{
                 //       xs: "15rem",
@@ -122,7 +161,7 @@ export default function Projects() {
                 //       width={{ xs: "90%", sm: "90%", md: "80%" }}
                 //       height={"80%"}
                 //       display={"flex"}
-                //       flexDirection={"column"}
+                //       flexdirection={"column"}
                 //       rowGap={"25px"}
                 //       padding={{
                 //         xs: "0px",
@@ -152,11 +191,11 @@ export default function Projects() {
                 //             ":hover": { color: "#AA7000", cursor: "pointer" },
                 //           }}
                 //         >
-                //           {ProjectName}
+                //           {name}
                 //         </Typography>
                 //       </a>
                 //       <Typography color={"gray"}>
-                //         {ProjectDescription}
+                //         {description}
                 //       </Typography>
                 //       <a href={link} target="_blank" rel="noreferrer">
                 //         <Box
@@ -188,12 +227,13 @@ export default function Projects() {
                 //   </Box>
                 // </Box>
                 <ProjectCard
-                  key={ProjectName}
-                  name={ProjectName}
-                  banner={ProjectBanner}
-                  direction={Direction}
+                  key={name}
+                  name={name}
+                  banner={banner}
+                  direction={direction}
                   link={link}
-                  discription={ProjectDescription}
+                  description={description}
+                  techStack={techStack}
                 />
               );
             }
