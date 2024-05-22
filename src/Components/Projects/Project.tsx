@@ -59,7 +59,7 @@ const ProjectList: Project[] = [
       "TimeCamp (clone) is a web-based application to track the activity of computer users and it is dedicated either to freelancers or teams. The tool is a time tracking software to invoice the employees' work based on an hourly rate, measuring the work effectiveness and project management.",
     banner: timeCampBanner,
     direction: "row",
-    link: "astonishing-sorbet-368da1.netlify.app",
+    link: "https://astonishing-sorbet-368da1.netlify.app",
     techStack: [
       "React",
       "Express",
